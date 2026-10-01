@@ -1,0 +1,50 @@
+MANUAL DE LEITURA DE GRÁFICO (use em toda análise a partir de agora)
+
+1. CONTEXTO PRIMEIRO (gráfico de 5 min)
+- Antes de operar no 1 min, olhe o 5 min do mesmo ativo.
+- Tendência de alta: topos e fundos cada vez mais altos. Só procure CALL.
+- Tendência de baixa: topos e fundos cada vez mais baixos. Só procure PUT.
+- Lateral: preço batendo entre um teto e um piso. Opere só nas pontas (PUT no teto, CALL no piso), nunca no meio.
+
+2. REGIÕES (marque mentalmente antes de cada entrada)
+- Suporte/resistência: lugares onde o preço já virou 2 ou mais vezes. Quanto mais toques, mais forte.
+- Máxima e mínima do dia e das últimas horas.
+- Números redondos (ex.: 1.1000, 508.00).
+- Suporte rompido vira resistência, e vice-versa (troca de polaridade).
+- Nunca entre no meio do caminho entre duas regiões.
+
+3. VELAS (só na vela FECHADA, nunca na vela em formação)
+- Vela de força: corpo grande e pouco pavio. Indica continuação a favor dela.
+- Pavio longo de rejeição numa região: o preço foi recusado ali. Indica reversão para o lado oposto ao pavio.
+- Martelo no suporte = CALL. Estrela cadente na resistência = PUT.
+- Engolfo de alta no suporte = CALL. Engolfo de baixa na resistência = PUT.
+- Doji: indecisão. Espere a próxima vela confirmar.
+- 3 ou mais velas grandes seguidas na mesma direção: exaustão. Não entre a favor, espere o recuo.
+
+4. MOVIMENTOS
+- Rompimento: vela fecha com corpo além da região. Entre no reteste (o preço volta, toca a região e rejeita), não na vela do rompimento.
+- Falso rompimento: o pavio passa da região, mas a vela fecha de volta. Entre contra o rompimento.
+- Pullback: em tendência, espere o recuo até a região ou média do movimento e a vela de retomada.
+- Topo duplo na resistência = PUT. Fundo duplo no suporte = CALL.
+
+5. QUANDO NÃO OPERAR
+- Velas muito pequenas e preço "arrastando" (sem volatilidade).
+- Velas gigantes e pavios enormes para os dois lados (volatilidade de notícia).
+- Os primeiros minutos depois de uma vela muito grande.
+- Quando o 5 min e o 1 min discordam.
+- Quando você não consegue explicar a entrada em uma frase.
+
+6. CHECKLIST DE ENTRADA (precisa dos 3)
+[ ] Tendência do 5 min a favor (ou ponta de lateral)
+[ ] Preço numa região marcada
+[ ] Vela fechada de confirmação (rejeição, engolfo, martelo/estrela)
+Faltou um, não entra.
+
+7. ENTRADA
+- Entre logo no início da vela seguinte à confirmação (primeiros 5 a 10 segundos).
+- Expiração de 1 vela (1 min). Se a análise for no 5 min, use 5 min.
+
+8. APRENDER COM CADA OPERAÇÃO
+- Depois de cada resultado, escreva em uma linha o que funcionou ou falhou (ex.: "perdi: entrei contra a tendência do 5 min").
+- Se repetir o mesmo erro 2 vezes, pare de fazer aquele tipo de entrada nesta sessão.
+- No resumo final, liste os padrões que deram ganho e os que deram perda.

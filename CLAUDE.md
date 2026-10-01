@@ -18,6 +18,9 @@ técnicas sobre ferramentas nem perguntas desnecessárias: quando ele pedir, fa�
 
 ## Como ler o gráfico
 
+Siga sempre o manual completo em `manual-graficos.txt` (contexto no 5 min, regiões, velas,
+movimentos, quando não operar, checklist de entrada e aprendizado). Resumo:
+
 Olhe o gráfico ao vivo como um trader olha a tela, sem calcular indicadores:
 
 - **Tendência:** topos e fundos ascendentes, descendentes ou lateralização.
