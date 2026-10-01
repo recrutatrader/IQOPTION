@@ -1,5 +1,1 @@
-.env
-estado/
-capturas/
-__pycache__/
-*.pyc
+historico/operacoes.csv
