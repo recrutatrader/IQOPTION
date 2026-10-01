@@ -13,8 +13,18 @@ Responda sempre em português do Brasil.
 - `python -m iqbot analisar --ativo EURUSD-OTC --tempo 60 --json`: indicadores (EMA9/21, RSI14, MACD, Bollinger), padrões de vela, suporte/resistência e um placar.
 - `python -m iqbot capturar`: abre a sala de operações no Chromium e salva um print em `capturas/`. Abra a imagem com Read para fazer a leitura visual do gráfico.
 - `python -m iqbot operar --ativo EURUSD-OTC --direcao call|put --valor N --minutos M`: abre uma operação.
+- `python -m iqbot robo --ativo EURUSD-OTC`: modo automático (analisa toda vela nova e opera quando 5 min e 1 min concordam).
+- `python -m iqbot backtest --ativo EURUSD-OTC --tempo 60 --quantidade 1000`: testa a estratégia no histórico e mostra a taxa de acerto por força do sinal.
+- `estado/operacoes.jsonl`: histórico das operações reais feitas pelo robô (ganhos e perdas).
 
 Se der erro de rede (`CONNECT tunnel failed, response 403` / `ERR_TUNNEL_CONNECTION_FAILED`), avise que o domínio `iqoption.com` (e subdomínios) precisa ser liberado no acesso à rede do ambiente e pare.
+
+## Calibração ("treino")
+
+Antes de operar um ativo pela primeira vez no dia, rode o `backtest` dele. Se a taxa de acerto geral
+estiver abaixo da `taxa_minima_para_lucrar`, avise que a estratégia não está funcionando nesse ativo
+agora e sugira outro ativo ou tempo gráfico. Use o resultado `por_forca_do_sinal` para dizer a partir de
+qual placar vale entrar. Periodicamente, leia `estado/operacoes.jsonl` e compare o resultado real com o backtest.
 
 ## Método de análise
 

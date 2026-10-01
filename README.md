@@ -8,7 +8,13 @@ Robô em Python que usa o **Chromium (Playwright)** logado na IQ Option para:
 
 Inclui o agente do Claude Code **`analista-graficos`** (`.claude/agents/analista-graficos.md`), especialista em leitura de gráfico que usa essas ferramentas.
 
-## Instalação
+## Instalação no Windows (2 cliques)
+
+1. No GitHub, abra o branch do projeto, clique em **Code > Download ZIP** e extraia a pasta.
+2. Dê dois cliques em **`INSTALAR.bat`**. Ele instala o Python (se faltar), as dependências e o navegador, e abre o `.env`: coloque seu e-mail e senha da IQ Option, salve e feche.
+3. Dê dois cliques em **`INICIAR.bat`**. O navegador abre na sua tela e o robô começa a analisar e operar na conta **DEMO**.
+
+## Instalação manual
 
 ```bash
 pip install -r requirements.txt
@@ -26,7 +32,18 @@ python -m iqbot saldo
 python -m iqbot analisar --ativo EURUSD-OTC --tempo 60
 python -m iqbot capturar
 python -m iqbot operar --ativo EURUSD-OTC --direcao call --valor 2 --minutos 1
+python -m iqbot robo --ativo EURUSD-OTC          # automático
+python -m iqbot backtest --ativo EURUSD-OTC --tempo 60 --quantidade 1000
 ```
+
+## Como a estratégia é "treinada"
+
+O robô não é uma IA que aprende sozinha: ele segue regras de análise técnica (veja `iqbot/analise.py`).
+O ajuste é feito com dados:
+
+1. **Backtest:** `python -m iqbot backtest` aplica as regras nas últimas velas do ativo e mostra a taxa de acerto, no geral e por força do sinal. Com payout de 80%, é preciso acertar mais de **55,6%** para ter lucro.
+2. **Ajuste:** se a taxa estiver baixa, mude os pesos e limites em `iqbot/analise.py` (por exemplo, exigir placar 4 em vez de 3), troque o ativo ou o tempo gráfico, e rode o backtest de novo.
+3. **Validação:** deixe o robô operando na DEMO e compare `estado/operacoes.jsonl` com o backtest antes de pensar em conta real.
 
 No Claude Code: *"use o agente analista-graficos para analisar EURUSD-OTC e operar na demo se houver sinal"*.
 

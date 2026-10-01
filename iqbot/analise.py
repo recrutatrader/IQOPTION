@@ -102,3 +102,35 @@ def analisar(velas: list[dict]) -> dict:
         "suporte_proximo": suporte,
         "resistencia_proxima": resistencia,
     }
+
+
+def backtest(velas: list[dict], minutos_vela: int = 1, payout: float = 0.8) -> dict:
+    """Simula o sinal em cada vela do histórico e mede quantas vezes teria acertado.
+
+    A entrada é no fechamento da vela i e o resultado é o fechamento da vela
+    i + minutos_vela (expiração em quantidade de velas). Empate conta como perda.
+    """
+    por_placar: dict[int, list[int]] = {}
+    for i in range(60, len(velas) - minutos_vela):
+        r = analisar(velas[: i + 1])
+        if r["sinal"] == "NEUTRO":
+            continue
+        entrada, saida = velas[i]["close"], velas[i + minutos_vela]["close"]
+        acertou = saida > entrada if r["sinal"] == "CALL" else saida < entrada
+        ganhos = por_placar.setdefault(abs(r["placar"]), [0, 0])
+        ganhos[0 if acertou else 1] += 1
+
+    def resumo(acertos: int, erros: int) -> dict:
+        total = acertos + erros
+        taxa = acertos / total if total else 0.0
+        return {"operacoes": total, "acertos": acertos, "taxa_acerto": round(taxa * 100, 1),
+                "lucro_por_1": round(acertos * payout - erros, 2)}
+
+    acertos = sum(v[0] for v in por_placar.values())
+    erros = sum(v[1] for v in por_placar.values())
+    return {
+        "velas_testadas": len(velas),
+        "taxa_minima_para_lucrar": round(100 / (1 + payout), 1),
+        "geral": resumo(acertos, erros),
+        "por_forca_do_sinal": {f"placar {k}": resumo(*v) for k, v in sorted(por_placar.items())},
+    }

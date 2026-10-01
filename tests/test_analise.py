@@ -2,7 +2,7 @@ import math
 import unittest
 
 from iqbot import indicadores as ind
-from iqbot.analise import analisar
+from iqbot.analise import analisar, backtest
 
 
 def _velas(precos):
@@ -38,6 +38,13 @@ class TestAnalise(unittest.TestCase):
     def test_poucas_velas(self):
         with self.assertRaises(ValueError):
             analisar(_velas([1.0] * 10))
+
+    def test_backtest(self):
+        precos = [1.10 + 0.002 * math.sin(i / 5) + 0.0003 * math.sin(i * 1.7) for i in range(300)]
+        r = backtest(_velas(precos))
+        self.assertEqual(r["taxa_minima_para_lucrar"], 55.6)
+        g = r["geral"]
+        self.assertEqual(g["operacoes"], sum(v["operacoes"] for v in r["por_forca_do_sinal"].values()))
 
 
 if __name__ == "__main__":
