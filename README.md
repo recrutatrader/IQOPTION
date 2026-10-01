@@ -28,7 +28,16 @@ No Mac, instale com `curl -fsSL https://claude.ai/install.sh | bash`, instale a 
 
 ## Como usar
 
-Fale com o agente na janela do Claude, por exemplo:
+Digite **`/operar`** na janela do Claude. Ele abre a IQ Option no Chrome e começa a analisar e
+operar sozinho. Pode passar ativo, valor e expiração: `/operar EUR/USD OTC 2 1`.
+
+### Sem instalar nada: direto no painel do Claude in Chrome
+
+No próprio Chrome, abra o painel lateral da extensão Claude, cole o texto de
+[`atalho-operar.txt`](atalho-operar.txt), deixe rodar e salve como atalho com o nome **operar**.
+Depois é só digitar **`/operar`** no painel, com a IQ Option aberta.
+
+Você também pode conversar com o agente, por exemplo:
 
 - "Analisa o EUR/USD OTC no gráfico de 1 minuto."
 - "Opera na demo com R$ 2, expiração de 1 minuto, quando tiver entrada boa."
