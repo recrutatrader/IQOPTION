@@ -1,0 +1,53 @@
+{
+  "titulo": "Você não precisa responder a tudo",
+  "nicho": "inteligência emocional",
+  "voz": "pt-BR-AntonioNeural",
+  "velocidade_voz": "-4%",
+  "cenas": [
+    {
+      "papel": "gancho",
+      "texto": "Nem toda provocação merece a sua resposta. E entender isso pode mudar a sua vida.",
+      "busca": ["calm man looking at the sea", "person breathing calm sunrise"]
+    },
+    {
+      "texto": "Quando alguém tenta te tirar do sério, existe um espaço muito pequeno entre o que acontece e o que você faz. É nesse espaço que mora a sua liberdade.",
+      "busca": ["water drop slow motion", "person thinking by the window"]
+    },
+    {
+      "texto": "A mente emocional quer reagir na hora. Ela grita, acusa, se defende. A mente racional quer explicar e provar que tem razão.",
+      "busca": ["storm clouds timelapse", "waves crashing on rocks"]
+    },
+    {
+      "texto": "Mas existe um terceiro caminho: a mente sábia. É quando a emoção e a razão se encontram, e você escolhe com calma o que vale a sua energia.",
+      "busca": ["calm lake reflection mountains", "woman meditating in nature"]
+    },
+    {
+      "texto": "Antes de responder, faça três perguntas. Isso é verdade? Isso é importante? Isso vai me deixar em paz amanhã?",
+      "busca": ["person writing in a journal", "hands holding coffee by the window"]
+    },
+    {
+      "texto": "Se a resposta for não, respire fundo e siga em frente. Silêncio não é fraqueza. Silêncio é domínio de si mesmo.",
+      "busca": ["man walking on forest path", "woman deep breath outdoors"]
+    },
+    {
+      "texto": "As pessoas mais fortes que você conhece não são as que ganham todas as discussões. São as que não precisam provar nada para ninguém.",
+      "busca": ["old man looking at the horizon", "person on mountain summit"]
+    },
+    {
+      "texto": "Proteja a sua paz como quem protege um tesouro. Ela é o seu bem mais valioso.",
+      "busca": ["candle flame in the dark", "sunlight through forest trees"]
+    },
+    {
+      "texto": "Comece hoje. Na próxima provocação, pare, respire e escolha. Você vai perceber que a calma também é uma resposta, e muitas vezes a mais poderosa.",
+      "busca": ["sunrise over hills", "peaceful person smiling outdoors"]
+    },
+    {
+      "papel": "chamada",
+      "texto": "Se essa mensagem fez sentido para você, salve este vídeo para lembrar quando precisar, e siga O Poder da Mente Sábia para mais reflexões como esta.",
+      "busca": ["person silhouette sunset arms open", "golden hour wheat field"]
+    }
+  ],
+  "legenda_post": "Nem toda provocação merece a sua resposta.\n\nAntes de reagir, pergunte: isso é verdade? Isso é importante? Isso vai me deixar em paz amanhã?\n\nSalve para lembrar e mande para quem precisa ouvir isso hoje.",
+  "hashtags": ["#opoderdamentesabia", "#mentesabia", "#inteligenciaemocional", "#autoconhecimento", "#pazinterior", "#autocontrole", "#reflexao", "#crescimentopessoal"],
+  "trilha": "auto"
+}
